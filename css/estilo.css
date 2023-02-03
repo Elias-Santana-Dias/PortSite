@@ -18,6 +18,14 @@ header{
     z-index: 1;*/
 }
 
+.presentation::before{
+    content: '';
+    background-color: #0050FF;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
 header a{
     padding: 10px 20px;
     color:black;
@@ -179,7 +187,7 @@ footer{
     margin: 8px 0;
 }
 
-/* Curriculo */
+/* Curriculo ------------------------*/
 
 .fundo-bege{
     background-color: #E6DACE;
@@ -196,6 +204,15 @@ footer{
     padding: 100px;
 }
 
+.container-curriculo h1::before{
+    content: '';
+    background-color: #0050FF;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
 .titulos-principais{
     display: flex;
     justify-content: space-between;
@@ -206,14 +223,21 @@ footer{
 
 .titulos-principais a{
     color:#fff;
-    border:1px solid #0050FF;
+    border:2px solid #0050FF;
     border-radius: 20px;
     font-size: 15px;
     padding: 10px 35px;
     background-color: #0050FF;
+    transition: ease-in-out .5s;
 }
 
-/*Boxes CCurriculo*/
+.titulos-principais a:hover{
+    border: 2px solid #0050FF;
+    background-color: transparent;
+    color: #000;
+}
+
+/*Boxes Curriculo*/
 
 .boxes-curriculo{
     background-color: #fff;
@@ -251,24 +275,34 @@ footer{
     margin-bottom: 20px 0;
 }
 
+/*Habilidades Profissionais -------*/
+
 .habilidades{
-    padding: 100px 50px;
     background-color: #fff;
-    margin-bottom: 80px;
+    padding: 100px 50px;
+    margin-bottom: 70px;
 }
 
 .habilidades ul{
-    display: flex;
-    justify-content: space-between;
-    line-height: 3;
-    height: 50px;
-    max-width: 400px;
+    margin-bottom: 20px;
 }
 
-.titulos-principais:nth-child(3){
-    margin-top: 100px;
+.habilidades ul li{
+    display: inline-block;
+    list-style-type: square;
+    margin: 15px 20px;
+    line-height: 2;
+
 }
 
+.habilidades ul li::before{
+    content: '';
+    background-color: #0050FF;
+    display:inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
 
 @media screen and (max-width:768px){
     .container{
@@ -283,6 +317,19 @@ footer{
 
     .perfil{
         margin-top: 150px;
+    }
+
+    .container-curriculo{
+        max-width:450px;
+        text-align: justify;
+    }
+
+    .boxes-curriculo .box-curriculo{
+        width: 100%;
+    }
+
+    .boxes-curriculo .box-curriculo-text{
+        width: 100%;
     }
 
     footer{
